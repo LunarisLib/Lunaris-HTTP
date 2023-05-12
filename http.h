@@ -59,8 +59,8 @@ namespace Lunaris {
 			INVALID_PARAMETER
 		};
 	protected:
-		constexpr std::wstring _wstr(const std::string& s) { return s.size() ? std::wstring(CA2W(s.c_str())) : L""; }
-		constexpr std::string _sstr(const std::wstring& s) { return s.size() ? std::string(CW2A(s.c_str())) : ""; }
+		const std::wstring _wstr(const std::string& s) { return s.size() ? std::wstring(CA2W(s.c_str())) : L""; }
+		const std::string _sstr(const std::wstring& s) { return s.size() ? std::string(CW2A(s.c_str())) : ""; }
 
 		constexpr DWORD _acast(const e_proxy& e) { return static_cast<DWORD>(e); }
 		constexpr DWORD _acast(const e_open_sec& e) { return static_cast<DWORD>(e); }
